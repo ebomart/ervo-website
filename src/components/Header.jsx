@@ -2,7 +2,7 @@ import { headerContent } from "../company-assets/content";
 
 const Header = () => {
   return (
-    <header className="w-full px-8 md:px-12 py-5 flex items-center justify-between bg-bg-primary shadow-sm bg-white sticky top-0 z-50">
+    <header className="w-full px-8 md:px-12 py-5 flex items-center justify-between bg-bg-primary bg-white sticky top-0 z-50">
       <div className="flex items-center gap-3">
         <img
           src={headerContent.brandLogo}

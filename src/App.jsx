@@ -6,6 +6,7 @@ import EngineeringExcellence from './components/EngineeringExcellence';
 import VideoSection from './components/VideoSection';
 import StoreLocations from './components/StoreLocations';
 import { productsContent } from './company-assets/content';
+import Footer from './components/Footer';
 
 function App() {
   const [activeCategory, setActiveCategory] = useState(null);
@@ -30,6 +31,7 @@ function App() {
       <EngineeringExcellence />
       <VideoSection />
       <StoreLocations />
+      <Footer />
     </div>
   );
 }
