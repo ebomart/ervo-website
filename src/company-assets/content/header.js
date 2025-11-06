@@ -12,7 +12,7 @@ const headerContent = {
       href: "#why-us",
     },
     {
-      label: "My stores",
+      label: "Our stores",
       href: "#stores",
     },
   ],

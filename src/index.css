@@ -13,11 +13,12 @@
   --color-text-gray: #616161;
 
   --color-border-primary: #CBCBCB;
-  
+  --color-bg-div: #F2F2F2;
   --color-bg-primary: #FFFFFF;
   --color-bg-secondary: #F9FAFB;
   --color-bg-tertiary: #F3F4F6;
   --color-bg-gray: #616161;
+
 }
 
 body {

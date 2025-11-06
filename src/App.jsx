@@ -9,11 +9,10 @@ import { productsContent } from './company-assets/content';
 import Footer from './components/Footer';
 
 function App() {
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('All Products');
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
-    // Scroll to products section
     const productsSection = document.getElementById('products');
     if (productsSection) {
       productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
