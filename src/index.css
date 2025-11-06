@@ -10,10 +10,12 @@
   --color-text-secondary: #4B5563;
   --color-text-tertiary: #6B7280;
   --color-text-light: #9CA3AF;
+  --color-text-gray: #616161;
   
   --color-bg-primary: #FFFFFF;
   --color-bg-secondary: #F9FAFB;
   --color-bg-tertiary: #F3F4F6;
+  --color-bg-gray: #616161;
 }
 
 body {
