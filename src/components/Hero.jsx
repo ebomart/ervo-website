@@ -4,14 +4,13 @@ import arrowRightIcon from "../company-assets/assets/right-circle-outlined.png";
 const Hero = ({ onExploreClick }) => {
   return (
     <section
-      className="relative m-auto w-[95%] h-[700px] rounded-3xl flex items-center justify-center bg-cover bg-center"
+      className=" mx-auto w-[95%] h-[700px] rounded-3xl flex items-start justify-center bg-cover bg-center"
       style={{
         backgroundImage: `url('${heroContent.backgroundImage}')`,
       }}
     >
-      <div className="absolute inset-0 "></div>
-      <div className="relative z-10 text-center px-6 max-w-5xl pt-20">
-        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-ervo-brown mb-6 leading-tight tracking-tight">
+      <div className=" z-10 text-center px-6 max-w-[100%] pt-20">
+        <h2 className="text-5xl font-bold text-ervo-brown mb-6 leading-tight tracking-tight">
           {heroContent.title}
         </h2>
         <p className="text-lg md:text-xl text-text-gray mb-2 font-normal leading-relaxed">
