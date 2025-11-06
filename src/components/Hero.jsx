@@ -1,4 +1,5 @@
 import { heroContent } from "../company-assets/content";
+import arrowRightIcon from "../company-assets/assets/right-circle-outlined.png";
 
 const Hero = ({ onExploreClick }) => {
   return (
@@ -24,9 +25,7 @@ const Hero = ({ onExploreClick }) => {
           className="bg-ervo-brown text-white px-10 py-4 rounded-full text-base font-medium hover:bg-ervo-dark-brown transition-colors flex items-center gap-3 mx-auto shadow-lg cursor-pointer"
         >
           {heroContent.buttonText}
-          <span className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center text-white font-bold">
-            →
-          </span>
+          <img src={arrowRightIcon} alt="arrow right" className="h-5 w-5" />
         </button>
       </div>
     </section>
