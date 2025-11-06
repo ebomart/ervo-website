@@ -1,46 +1,39 @@
-import { storesContent } from '../company-assets/content';
+import { storesContent } from "../company-assets/content";
+// import storeLocationsImage from '../company-assets/assets/Ibo-store.png';
+import arrowRightIcon from "../company-assets/assets/right-circle-outlined.png";
 
 const StoreLocations = () => {
   const { title, buttonText, locations, backgroundImage } = storesContent;
-  
+
   return (
     <section
       id="stores"
-      className="relative w-full h-[550px] flex items-center justify-center bg-cover bg-center"
+      className="m-auto flex h-[550px] w-[90%] items-center justify-start rounded-3xl bg-contain bg-center bg-no-repeat"
       style={{
         backgroundImage: `url('${backgroundImage}')`,
       }}
     >
-      {/* <div className="absolute inset-0 bg-black/50"></div> */}
       <div
-        className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12"
-        style={{ backdropFilter: 'blur(11px)' }}
+        className="bg-bg-primary/50 z-10 ml-10 flex min-h-[228px] max-w-4xl min-w-[728px] flex-col items-start justify-around rounded-xl bg-position-[0%_0%] pt-6 p-4 backdrop-blur-md md:px-12"
       >
-        <div className="bg-[#FFFFFF 0% 0%] backdrop-blur-sm rounded-xl p-10 md:p-14 max-w-2xl shadow-2xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-8 leading-tight tracking-tight">
-            {title}
-          </h2>
-          <div className="flex flex-wrap gap-2 mb-10 text-black text-base md:text-lg leading-normal">
-            {locations.map((location, index) => (
-              <span key={index} className="whitespace-nowrap">
-                {location}
-                {index < locations.length - 1 && (
-                  <span className="mx-2">|</span>
-                )}
-              </span>
-            ))}
-          </div>
-          <button className="bg-ibo-red rounded-full text-white px-10 py-4 text-base font-medium transition-colors flex items-center gap-3 shadow-lg">
-            {buttonText}
-            <span className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center text-white font-bold">
-              →
+        <h2 className="text-3xl leading-tight font-semibold tracking-tight text-black">
+          {title}
+        </h2>
+        <div className="text-text-gray flex flex-wrap gap-2 text-base leading-normal">
+          {locations.map((location, index) => (
+            <span key={index} className="whitespace-nowrap">
+              {location}
+              {index < locations.length - 1 && <span className="mx-2">|</span>}
             </span>
-          </button>
+          ))}
         </div>
+        <button className="bg-ibo-red flex items-center gap-2 rounded-full px-3 py-2 text-base font-medium text-white shadow-lg transition-colors">
+          {buttonText}
+          <img src={arrowRightIcon} alt="arrow right" className="h-5 w-5" />
+        </button>
       </div>
     </section>
   );
 };
 
 export default StoreLocations;
-
