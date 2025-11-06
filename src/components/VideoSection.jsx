@@ -11,9 +11,8 @@ const VideoSection = () => {
               backgroundImage: `url('${videoContent.backgroundImage}')`,
             }}
           >
-            {/* <div className="absolute inset-0 bg-black/30"></div> */}
-            
-            <button className="bg-bg-primary hover:bg-bg-tertiary relative z-10 flex h-24 w-24 items-center justify-center rounded-full shadow-lg transition-colors">
+
+            <button className="bg-bg-primary hover:bg-bg-tertiary relative z-10 flex h-24 w-24 cursor-pointer items-center justify-center rounded-full shadow-lg transition-colors">
               <svg
                 className="text-text-primary ml-1 h-12 w-12"
                 fill="currentColor"
