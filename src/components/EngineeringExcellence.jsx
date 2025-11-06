@@ -3,6 +3,7 @@ import sustainabilityIcon from "../company-assets/assets/sustainability.svg";
 import unrivaledQualityIcon from "../company-assets/assets/unrivaled-quality.svg";
 import unmatchedVarietyIcon from "../company-assets/assets/unmatched-variety.svg";
 import legacyOfExcellenceIcon from "../company-assets/assets/legacy-of-excellence.svg";
+import Section from "./common/Section";
 
 const EngineeringExcellence = () => {
   const { title, description, features } = engineeringContent;
@@ -27,10 +28,7 @@ const EngineeringExcellence = () => {
   ];
 
   return (
-    <section
-      id="why-us"
-      className="relative w-full rounded-[28px] bg-[padding-box] bg-[radial-gradient(closest-side_at_50%_50%,rgba(239,227,195,0.37)_0%,rgba(245,239,222,0.37)_33%,rgba(240,229,200,0)_100%)] bg-cover bg-no-repeat px-6 py-20 before:absolute before:top-0 before:left-0 before:h-[2px] before:w-full before:bg-[radial-gradient(circle_at_center,_rgba(220,169,145,0.4),_rgba(255,255,255,0.4))] before:content-[''] md:px-12"
-    >
+    <Section id="why-us">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-ervo-brown mb-5 text-center text-4xl leading-tight font-bold tracking-tight md:text-5xl">
           {title}
@@ -50,7 +48,7 @@ const EngineeringExcellence = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
