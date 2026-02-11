@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ervo-brown: #8B4513;
+  --color-ervo-brown: #8b4513;
   --color-ervo-dark-brown: #654321;
-  --color-ervo-light-brown: #A0522D;
-  --color-ibo-red: #A02D2D;
-  
-  --color-text-primary: #1F2937;
-  --color-text-secondary: #4B5563;
-  --color-text-tertiary: #6B7280;
-  --color-text-light: #9CA3AF;
+  --color-ervo-light-brown: #a0522d;
+  --color-ibo-red: #a02d2d;
+
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #6b7280;
+  --color-text-light: #9ca3af;
   --color-text-gray: #616161;
 
-  --color-border-primary: #CBCBCB;
-  --color-bg-div: #F2F2F2;
-  --color-bg-primary: #FFFFFF;
-  --color-bg-secondary: #F9FAFB;
-  --color-bg-tertiary: #F3F4F6;
+  --color-border-primary: #cbcbcb;
+  --color-bg-div: #f2f2f2;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  --color-bg-tertiary: #f3f4f6;
   --color-bg-gray: #616161;
-
 }
 
+html,
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  /* Hide scrollbars while keeping scroll functionality */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
