@@ -1,21 +1,33 @@
-import ervoLogo from "../assets/ervo-logo.png";
+import ervoLogo from "../assets/main-logo.png";
 const headerContent = {
   brandName: "ERVO",
   brandLogo: ervoLogo,
-  navigations: [
-    {
-      label: "Products",
-      href: "#products",
-    },
-    {
-      label: "Why us",
-      href: "#why-us",
-    },
-    {
-      label: "Our stores",
-      href: "#stores",
-    },
-  ],
+  navigations: {
+    prefixNavigations: [
+      {
+        label: "Home",
+        href: "/",
+      },
+      {
+        label: "Products",
+        href: "#products",
+      },
+      {
+        label: "Why us",
+        href: "#why-us",
+      },
+    ],
+    suffixNavigations: [
+      {
+        label: "Our stores",
+        href: "#stores",
+      },
+      {
+        label: "Contact Us",
+        href: "/contact",
+      },
+    ],
+  },
 };
 
 export default headerContent;
