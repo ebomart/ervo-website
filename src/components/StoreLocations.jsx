@@ -8,7 +8,7 @@ const StoreLocations = () => {
   return (
     <section
       id="stores"
-      className="m-auto flex min-h-[500px] w-[90%] max-w-7xl items-center justify-start rounded-3xl bg-contain bg-center bg-no-repeat sm:min-h-[500px] md:h-[550px]"
+      className="m-auto flex min-h-[500px] w-[90%] max-w-7xl items-center justify-start rounded-3xl bg-cover bg-center bg-no-repeat sm:min-h-[500px] sm:bg-contain md:h-[500px]"
       style={{
         backgroundImage: `url('${backgroundImage}')`,
       }}
@@ -19,7 +19,7 @@ const StoreLocations = () => {
         </h2>
         <div className="text-text-gray flex flex-wrap gap-2 text-sm leading-normal sm:text-base">
           {locations.map((location, index) => (
-            <span key={index} className="whitespace-nowrap">
+            <span key={index} className="sm:whitespace-nowrap">
               {location}
               {index < locations.length - 1 && <span className="mx-2">|</span>}
             </span>

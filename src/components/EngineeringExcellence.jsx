@@ -30,18 +30,18 @@ const EngineeringExcellence = () => {
   return (
     <Section id="why-us">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-ervo-brown mb-5 text-center text-4xl leading-tight font-bold tracking-tight md:text-5xl">
+        <h2 className="mb-5 text-center text-4xl leading-tight font-bold tracking-tight text-[#4B174B] md:text-5xl">
           {title}
         </h2>
         <p className="text-text-secondary mx-auto mb-16 max-w-4xl text-center text-base leading-relaxed md:text-lg">
           {description}
         </p>
 
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 items-center mx-auto w-[50%]">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <div className="text-ervo-brown mb-5">{icons[index]}</div>
-              <h3 className="text-text-primary text-lg leading-normal font-semibold">
+              <div className="mb-5">{icons[index]}</div>
+              <h3 className="text-lg leading-normal font-semibold text-[#616161]">
                 {feature.title}
               </h3>
             </div>
