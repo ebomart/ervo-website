@@ -1,4 +1,5 @@
 import { engineeringContent } from "../company-assets/content";
+import { gradients } from "../company-assets/theme";
 import sustainabilityIcon from "../company-assets/assets/sustainability.svg";
 import unrivaledQualityIcon from "../company-assets/assets/unrivaled-quality.svg";
 import unmatchedVarietyIcon from "../company-assets/assets/unmatched-variety.svg";
@@ -28,27 +29,35 @@ const EngineeringExcellence = () => {
   ];
 
   return (
-    <Section id="why-us">
+    <section
+      id="why-us"
+      className="relative mx-auto mb-10 p-5"
+      style={{
+        background: gradients.engineeringSectionBg,
+      }}
+    >
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-5 text-center text-4xl leading-tight font-bold tracking-tight text-[#4B174B] md:text-5xl">
+        <h2 className="text-brand-primary mb-5 text-center text-4xl leading-tight font-bold tracking-tight md:text-5xl">
           {title}
         </h2>
         <p className="text-text-secondary mx-auto mb-16 max-w-4xl text-center text-base leading-relaxed md:text-lg">
           {description}
         </p>
-
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 items-center mx-auto w-[50%]">
+        <div className="mx-auto grid w-[50%] grid-cols-1 items-center gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
+            <div
+              key={index}
+              className="flex min-h-[124px] flex-col items-center text-center"
+            >
               <div className="mb-5">{icons[index]}</div>
-              <h3 className="text-lg leading-normal font-semibold text-[#616161]">
+              <h3 className="text-text-gray text-lg leading-normal font-semibold">
                 {feature.title}
               </h3>
             </div>
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 

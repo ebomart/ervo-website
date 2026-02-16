@@ -8,12 +8,12 @@ const StoreLocations = () => {
   return (
     <section
       id="stores"
-      className="m-auto flex min-h-[500px] w-[90%] max-w-7xl items-center justify-start rounded-3xl bg-cover bg-center bg-no-repeat sm:min-h-[500px] sm:bg-contain md:h-[500px]"
+      className="mx-auto my-20 flex min-h-[300px] w-[90%] max-w-7xl items-center justify-start rounded-3xl bg-center bg-no-repeat md-bg-contain"
       style={{
         backgroundImage: `url('${backgroundImage}')`,
       }}
     >
-      <div className="bg-bg-primary/50 z-10 ml-4 flex min-h-[228px] w-full max-w-4xl flex-col items-start justify-around rounded-xl bg-position-[0%_0%] p-4 pt-6 backdrop-blur-md sm:ml-6 sm:min-w-[400px] sm:p-6 md:ml-10 md:min-w-[728px] md:px-12">
+      <div className="bg-bg-primary/50 z-10 ml-4 flex min-h-[228px] w-full max-w-4xl flex-col items-start justify-around rounded-xl bg-position-[0%_0%] p-4 pt-6 backdrop-blur-md sm:ml-6 sm:min-w-[400px] sm:p-6 md:ml-10 md:min-w-[628px] md:px-12 mr-4">
         <h2 className="text-2xl leading-tight font-semibold tracking-tight text-black sm:text-3xl md:text-3xl">
           {title}
         </h2>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { productsContent } from "../company-assets/content";
+import { gradients } from "../company-assets/theme";
 import Section from "./common/Section";
 import nextArrowIcon from "../company-assets/assets/next-arrow.svg";
 import previousArrowIcon from "../company-assets/assets/previous-arrow.svg";
@@ -49,24 +50,21 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
   );
 
   return (
-    <Section
-      id="products"
-      // className="bg-[padding-box] border-t relative w-full rounded-[28px] border-t-[#F6C6F6]"
-      style={{
-        // borderTop: "1px solid #F6C6F6",
-        background:
-          "transparent radial-gradient(closest-side at 50% 7%, rgba(248,117,248,0.35) 0%, rgba(253,215,251,0.35) 33%, rgba(229,200,240,0) 100%) 0% 0% no-repeat padding-box",
-      }}
-      // className="relative w-full rounded-[28px] bg-[padding-box] bg-[radial-gradient(closest-side_at_50%_50%,rgba(239,227,195,0.37)_0%,rgba(245,239,222,0.37)_33%,rgba(240,229,200,0)_100%)] bg-cover bg-no-repeat px-6 py-20 before:absolute before:top-0 before:left-0 before:h-[2px] before:w-full before:bg-[radial-gradient(circle_at_center,rgba(220,169,145,0.4),rgba(255,255,255,0.4))] before:content-[''] md:px-12"
-    >
-      <div className="mx-auto max-w-7xl border-t border-t-[#F6C6F6]">
-        <div className="flex items-center justify-center pt-6 pb-2 text-[14px] font-semibold text-[#4B174B]">
+    <Section id="products">
+      <div
+        className="border-border-brand-light mx-auto max-w-7xl border-t"
+        style={{
+          background: gradients.productsSectionBg,
+          borderImage: gradients.productsSectionBorderImage,
+        }}
+      >
+        <div className="text-brand-primary flex items-center justify-center pt-6 pb-2 text-[14px] font-semibold">
           Top Categories
         </div>
-        <h2 className="mb-5 text-center text-4xl leading-tight font-bold tracking-tight text-[#4B174B] md:text-5xl">
+        <h2 className="text-brand-primary mb-5 text-center text-4xl leading-tight font-bold tracking-tight md:text-5xl">
           {title}
         </h2>
-        <p className="text-text-secondary mx-auto mb-14 max-w-4xl text-center text-base leading-relaxed md:text-lg">
+        <p className="text-text-gray mx-auto mb-14 max-w-4xl text-center text-[20px] leading-relaxed md:text-lg">
           {description}
         </p>
 
@@ -75,17 +73,16 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`cursor-pointer rounded-[28px] px-7 py-3 text-base font-medium transition-all ${
+              className={`cursor-pointer rounded-[28px] px-7 py-3 text-[14px] font-medium transition-all ${
                 activeCategory === category
-                  ? "text-[#4B174B]"
-                  : "text-text-secondary hover:bg-gray-300"
+                  ? "text-brand-primary"
+                  : "text-text-secondary"
               }`}
               style={
                 activeCategory === category
                   ? {
-                      background:
-                        "radial-gradient(closest-side at 50% 87%, rgba(248,117,248,0.18) 0%, rgba(247,227,255,0.18) 100%)",
-                      border: "1px solid rgba(246, 198, 246, 0.25)",
+                      background: gradients.categoryButtonActiveBg,
+                      border: gradients.categoryButtonActiveBorder,
                     }
                   : undefined
               }
@@ -107,6 +104,7 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
                     price={product.price}
                     image={product.image}
                     description={product.description}
+                    link={product.link}
                   />
                 ))}
               </div>
@@ -125,7 +123,6 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
                   <img
                     src={previousArrowIcon}
                     alt="Previous products"
-                    // className="h-5 w-5"
                     height={30}
                     width={30}
                   />
@@ -138,8 +135,8 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
                         key={index}
                         className={`h-1.5 rounded-full transition-colors ${
                           index === currentPage
-                            ? "bg-[#4B174B]"
-                            : "bg-[#EBD4EB]"
+                            ? "bg-paginator-active"
+                            : "bg-paginator-inactive"
                         }`}
                         style={{
                           width: "32px",

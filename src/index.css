@@ -1,23 +1,43 @@
 @import "tailwindcss";
 
+/* Theme values are injected from company-assets/theme (injectTheme() in main.jsx). */
 @theme {
-  --color-ervo-brown: #8b4513;
-  --color-ervo-dark-brown: #654321;
-  --color-ervo-light-brown: #a0522d;
-  --color-ibo-red: #a02d2d;
+  --color-ervo-brown: var(--company-ervo-brown);
+  --color-ervo-dark-brown: var(--company-ervo-dark-brown);
+  --color-ervo-light-brown: var(--company-ervo-light-brown);
+  --color-ibo-red: var(--company-ibo-red);
 
-  --color-text-primary: #1f2937;
-  --color-text-secondary: #4b5563;
-  --color-text-tertiary: #6b7280;
-  --color-text-light: #9ca3af;
-  --color-text-gray: #616161;
+  --color-text-primary: var(--company-text-primary);
+  --color-text-secondary: var(--company-text-secondary);
+  --color-text-tertiary: var(--company-text-tertiary);
+  --color-text-light: var(--company-text-light);
+  --color-text-gray: var(--company-text-gray);
 
-  --color-border-primary: #cbcbcb;
-  --color-bg-div: #f2f2f2;
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f9fafb;
-  --color-bg-tertiary: #f3f4f6;
-  --color-bg-gray: #616161;
+  --color-border-primary: var(--company-border-primary);
+  --color-bg-div: var(--company-bg-div);
+  --color-bg-primary: var(--company-bg-primary);
+  --color-bg-secondary: var(--company-bg-secondary);
+  --color-bg-tertiary: var(--company-bg-tertiary);
+  --color-bg-gray: var(--company-bg-gray);
+
+  /* Brand and accent (for utilities like text-brand-primary, bg-brand-primary) */
+  --color-brand-primary: var(--company-brand-primary);
+  --color-brand-primary-hover: var(--company-brand-primary-hover);
+  --color-border-brand-light: var(--company-border-brand-light);
+  --color-border-white-alpha: var(--company-border-white-alpha);
+  --color-accent-purple: var(--company-accent-purple);
+  --color-paginator-active: var(--company-paginator-active);
+  --color-paginator-inactive: var(--company-paginator-inactive);
+}
+
+#why-us {
+  background: radial-gradient(
+      closest-side at 54% 100%,
+      var(--company-accent-pink) 0%,
+      var(--company-accent-pink-light) 33%,
+      var(--company-accent-lavender-alpha-0) 100%
+    )
+    no-repeat padding-box;
 }
 
 html,
