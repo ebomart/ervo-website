@@ -25,7 +25,7 @@ const StoreLocations = () => {
             </span>
           ))}
         </div>
-        <button className="bg-ibo-red flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-white shadow-lg transition-colors sm:text-base">
+        <button className="bg-ibo-red flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-white shadow-lg transition-colors sm:text-base lg:mt-0 mt-2">
           {buttonText}
           <img src={arrowRightIcon} alt="arrow right" className="h-5 w-5" />
         </button>

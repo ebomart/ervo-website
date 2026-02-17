@@ -24,7 +24,7 @@ const headerContent = {
       },
       {
         label: "Contact Us",
-        href: "/contact",
+        href: "https://www.ibo.com/faq/account-login",
       },
     ],
   },

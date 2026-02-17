@@ -64,7 +64,7 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
         <h2 className="text-brand-primary mb-5 text-center text-4xl leading-tight font-bold tracking-tight md:text-5xl">
           {title}
         </h2>
-        <p className="text-text-gray mx-auto mb-14 max-w-4xl text-center text-[20px] leading-relaxed md:text-lg">
+        <p className="text-text-gray mx-auto mb-14 max-w-4xl text-center text-[20px] px-1 leading-relaxed md:text-lg">
           {description}
         </p>
 
@@ -73,7 +73,7 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`cursor-pointer rounded-[28px] px-7 py-3 text-[14px] font-medium transition-all ${
+              className={`cursor-pointer rounded-[28px] px-7 py-3 text-[14px] font-medium ${
                 activeCategory === category
                   ? "text-brand-primary"
                   : "text-text-secondary"

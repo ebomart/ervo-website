@@ -6,6 +6,7 @@ const Hero = ({ onExploreClick }) => {
   return (
     <>
       <section
+        id="hero"
         className="relative mx-auto mb-10 flex min-h-[650px] w-[95%] items-start justify-center rounded-3xl bg-cover bg-center"
         style={{
           background: `

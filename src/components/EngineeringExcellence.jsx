@@ -29,9 +29,8 @@ const EngineeringExcellence = () => {
   ];
 
   return (
-    <section
+    <Section
       id="why-us"
-      className="relative mx-auto mb-10 p-5"
       style={{
         background: gradients.engineeringSectionBg,
       }}
@@ -57,7 +56,7 @@ const EngineeringExcellence = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
