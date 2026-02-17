@@ -35,7 +35,7 @@ export const colors = {
   accent: "rgba(185, 253, 235, 0.25)",
   accentLight: "rgba(198, 246, 234, 0.25)",
   accentAlpha90: "rgba(185, 253, 235, 0.9)",
-  accentAlpha50: "rgba(41, 104, 88, 0.25)",
+  accentAlpha50: "rgba(41, 104, 88, 0.15)",
   accentAlpha25: "rgba(41, 104, 88, 0.25)",
   accentLightAlpha37: "rgba(198, 246, 234, 0.37)",
   accentLightAlpha25: "rgba(221, 255, 246, 0.25)",
