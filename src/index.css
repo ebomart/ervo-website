@@ -25,7 +25,7 @@
   --color-brand-primary-hover: var(--company-brand-primary-hover);
   --color-border-brand-light: var(--company-border-brand-light);
   --color-border-white-alpha: var(--company-border-white-alpha);
-  --color-accent-purple: var(--company-accent-purple);
+  --color-accent-primary: var(--company-accent-primary);
   --color-paginator-active: var(--company-paginator-active);
   --color-paginator-inactive: var(--company-paginator-inactive);
 }
@@ -33,9 +33,9 @@
 #why-us {
   background: radial-gradient(
       closest-side at 54% 100%,
-      var(--company-accent-pink) 0%,
-      var(--company-accent-pink-light) 33%,
-      var(--company-accent-lavender-alpha-0) 100%
+      var(--company-accent) 0%,
+      var(--company-accent-light) 33%,
+      var(--company-accent-fade0) 100%
     )
     no-repeat padding-box;
 }
