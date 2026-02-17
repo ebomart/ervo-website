@@ -30,19 +30,19 @@ export const colors = {
   bgTertiary: "#f3f4f6",
   bgGray: "#616161",
 
-  // Accent / purple palette
-  accentPurple: "#CB91DC",
-  accentPink: "#f875f8",
-  accentPinkLight: "#fdd7fb",
-  accentPinkAlpha90: "rgba(248, 117, 248, 0.9)",
-  accentPinkAlpha50: "rgba(248, 117, 248, 0.5)",
-  accentPinkAlpha25: "rgba(248, 117, 248, 0.25)",
-  accentPinkLight37: "rgba(253, 215, 251, 0.37)",
-  accentPinkLight25: "rgba(247, 227, 255, 0.25)",
-  accentPinkLight18: "rgba(247, 227, 255, 0.18)",
-  accentLavender25: "rgba(246, 198, 246, 0.25)",
-  accentLavender15: "rgba(246, 198, 246, 0.15)",
-  accentLavenderAlpha0: "rgba(229, 200, 240, 0)",
+  // Accent (generic names – change hex/rgba values to rebrand)
+  accentPrimary: "#CB91DC",
+  accent: "#f875f8",
+  accentLight: "#fdd7fb",
+  accentAlpha90: "rgba(248, 117, 248, 0.9)",
+  accentAlpha50: "rgba(248, 117, 248, 0.5)",
+  accentAlpha25: "rgba(248, 117, 248, 0.25)",
+  accentLightAlpha37: "rgba(253, 215, 251, 0.37)",
+  accentLightAlpha25: "rgba(247, 227, 255, 0.25)",
+  accentLightAlpha18: "rgba(247, 227, 255, 0.18)",
+  accentSoft25: "rgba(246, 198, 246, 0.25)",
+  accentSoft15: "rgba(246, 198, 246, 0.15)",
+  accentFade0: "rgba(229, 200, 240, 0)",
 
   // Product card
   cardGradientStart: "#FFEBE1A1",
@@ -67,20 +67,20 @@ export const colors = {
  */
 export const gradients = {
   heroOverlay: `linear-gradient(180deg, ${colors.black} 0%, ${colors.blackTransparent} 100%)`,
-  heroButtonBorder: `1px solid ${colors.accentLavender15}`,
-  heroButtonBg: `radial-gradient(closest-side at 50% 70%, ${colors.accentPinkAlpha25} 0%, ${colors.accentPinkLight25} 100%)`,
+  heroButtonBorder: `1px solid ${colors.accentSoft15}`,
+  heroButtonBg: `radial-gradient(closest-side at 50% 70%, ${colors.accentAlpha25} 0%, ${colors.accentLightAlpha25} 100%)`,
 
-  productsSectionBg: `radial-gradient(circle at 50% -15%, ${colors.accentPinkAlpha90} 0%, ${colors.accentPinkLight37} 18%, ${colors.accentLavenderAlpha0} 50%)`,
-  productsSectionBorderImage: `radial-gradient(circle at 50% 10%, ${colors.accentPurple} 0%, ${colors.white} 60%) 1`,
-  categoryButtonActiveBg: `radial-gradient(closest-side at 50% 87%, ${colors.accentPinkAlpha50} 10%, ${colors.accentPinkLight18} 100%)`,
-  categoryButtonActiveBorder: `1px solid ${colors.accentLavender25}`,
+  productsSectionBg: `radial-gradient(circle at 50% -15%, ${colors.accentAlpha90} 0%, ${colors.accentLightAlpha37} 18%, ${colors.accentFade0} 50%)`,
+  productsSectionBorderImage: `radial-gradient(circle at 50% 10%, ${colors.accentPrimary} 0%, ${colors.white} 60%) 1`,
+  categoryButtonActiveBg: `radial-gradient(closest-side at 50% 87%, ${colors.accentAlpha50} 10%, ${colors.accentLightAlpha18} 100%)`,
+  categoryButtonActiveBorder: `1px solid ${colors.accentSoft25}`,
 
   productCardBg: `transparent radial-gradient(closest-side at 77% 100%, ${colors.cardGradientStart} 0%, ${colors.cardGradientEnd} 100%) 0% 0% no-repeat padding-box`,
   productCardButtonBg: `radial-gradient(circle, ${colors.cardButtonGradientStart} 0%, ${colors.cardButtonGradientEnd} 100%)`,
 
-  engineeringSectionBg: `radial-gradient(circle at 50% 150%, ${colors.accentPink} 0%, ${colors.accentPinkLight37} 27%, ${colors.accentLavenderAlpha0} 50%)`,
+  engineeringSectionBg: `radial-gradient(circle at 50% 150%, ${colors.accent} 0%, ${colors.accentLightAlpha37} 27%, ${colors.accentFade0} 50%)`,
 
-  whyUsSectionBg: `radial-gradient(closest-side at 54% 100%, ${colors.accentPink} 0%, ${colors.accentPinkLight} 33%, ${colors.accentLavenderAlpha0} 100%)`,
+  whyUsSectionBg: `radial-gradient(closest-side at 54% 100%, ${colors.accent} 0%, ${colors.accentLight} 33%, ${colors.accentFade0} 100%)`,
 };
 
 /**
