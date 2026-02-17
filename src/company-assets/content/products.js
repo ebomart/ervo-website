@@ -1,7 +1,6 @@
 const productsContent = {
-  title: "Innovative Electrical Solutions for Every Need",
-  description:
-    "Discover a complete range of high-quality electrical products designed to simplify life and energize your world. Whether it's for home, industry, or commercial use ERVO's products stand for efficiency, durability, and smart design.",
+  title: "Style Your Space with Confidence",
+  description:"BELZA isn't just a brand - it's your sanctuary of innovation, ease, and elevated everyday living. From intuitive fixtures & fittings to statement-making interior elements, everything you need to create your dream space lives under one smart, sophisticated roof.",
   categories: [
     "All Products",
     "Storage Geyser",

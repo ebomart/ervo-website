@@ -1,19 +1,20 @@
 const engineeringContent = {
-  title: 'Engineering Excellence Since Day One',
-  description: 'Our team of experts continuously pushes the boundaries of technology to create products that are safe, sustainable, and built to meet the evolving needs of modern homes and industries.',
+  title:
+    "Step into a world where form, function, and finesse exist in perfect balance.",
+  description:"BELZA isn't just a brand - it's your sanctuary of innovation, ease and elevated everyday living. From intuitive fixtures & fittings to statement-making interior elements, everything you need to create your dream space lives under one smart, sophisticated roof.",
   features: [
     {
-      title: 'Sustainability'
+      title: "Sustainability",
     },
     {
-      title: 'Unrivaled Quality'
+      title: "Unrivaled Quality",
     },
     {
-      title: 'Unmatched Variety'
+      title: "Unmatched Variety",
     },
     {
-      title: 'Legacy Of Excellence'
-    }
+      title: "Legacy Of Excellence",
+    },
   ],
 };
 

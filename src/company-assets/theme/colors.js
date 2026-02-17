@@ -5,7 +5,7 @@
 
 export const colors = {
   // Brand
-  brandPrimary: "#4B174B",
+  brandPrimary: "#2F7A6B",
   brandPrimaryHover: "#5c2560",
 
   // Neutrals
@@ -30,30 +30,30 @@ export const colors = {
   bgTertiary: "#f3f4f6",
   bgGray: "#616161",
 
-  // Accent (generic names – change hex/rgba values to rebrand)
-  accentPrimary: "#CB91DC",
-  accent: "#f875f8",
-  accentLight: "#fdd7fb",
-  accentAlpha90: "rgba(248, 117, 248, 0.9)",
-  accentAlpha50: "rgba(248, 117, 248, 0.5)",
-  accentAlpha25: "rgba(248, 117, 248, 0.25)",
-  accentLightAlpha37: "rgba(253, 215, 251, 0.37)",
-  accentLightAlpha25: "rgba(247, 227, 255, 0.25)",
-  accentLightAlpha18: "rgba(247, 227, 255, 0.18)",
-  accentSoft25: "rgba(246, 198, 246, 0.25)",
-  accentSoft15: "rgba(246, 198, 246, 0.15)",
-  accentFade0: "rgba(229, 200, 240, 0)",
+  // Accent (generic names – change hex/rgba values to rebrand; main colors at 25% opacity)
+  accentPrimary: "rgba(203, 145, 220, 0.25)",
+  accent: "rgba(185, 253, 235, 0.25)",
+  accentLight: "rgba(198, 246, 234, 0.25)",
+  accentAlpha90: "rgba(185, 253, 235, 0.9)",
+  accentAlpha50: "rgba(41, 104, 88, 0.25)",
+  accentAlpha25: "rgba(41, 104, 88, 0.25)",
+  accentLightAlpha37: "rgba(198, 246, 234, 0.37)",
+  accentLightAlpha25: "rgba(221, 255, 246, 0.25)",
+  accentLightAlpha18: "rgba(221, 255, 246, 0.18)",
+  accentSoft25: "rgba(176, 216, 206, 0.25)",
+  accentSoft15: "rgba(176, 216, 206, 0.25)",
+  accentFade0: "rgba(231, 255, 249, 0)",
 
   // Product card
   cardGradientStart: "#FFEBE1A1",
   cardGradientEnd: "#FFFFFF",
-  cardButtonGradientStart: "rgba(255, 235, 225, 0.75)",
+  cardButtonGradientStart: "#EEFFFB",
   cardButtonGradientEnd: "rgba(255, 255, 255, 1)",
   cardShadow: "#D2D2D280",
 
   // Paginator
-  paginatorActive: "#4B174B",
-  paginatorInactive: "#EBD4EB",
+  paginatorActive: "#2F7A6B",
+  paginatorInactive: "#EEFFFB",
 
   // Legacy / optional (existing theme names)
   ervoBrown: "#8b4513",
