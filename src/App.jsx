@@ -23,20 +23,22 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <FloatingButton />
-      <Hero
-        onExploreClick={() =>
-          handleCategoryChange(productsContent.categories[0])
-        }
-      />
-      <ProductCategories
-        activeCategory={activeCategory}
-        setActiveCategory={handleCategoryChange}
-      />
-      <EngineeringExcellence />
-      {/* <VideoSection /> */}
-      <StoreLocations />
-      <Footer />
+      <main className="pt-23">
+        <FloatingButton />
+        <Hero
+          onExploreClick={() =>
+            handleCategoryChange(productsContent.categories[0])
+          }
+        />
+        <ProductCategories
+          activeCategory={activeCategory}
+          setActiveCategory={handleCategoryChange}
+        />
+        <EngineeringExcellence />
+        {/* <VideoSection /> */}
+        <StoreLocations />
+        <Footer />
+      </main>
     </div>
   );
 }

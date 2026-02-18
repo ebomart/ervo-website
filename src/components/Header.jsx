@@ -58,7 +58,7 @@ const Header = () => {
     href?.startsWith("http://") || href?.startsWith("https://");
 
   return (
-    <header className="bg-bg-primary sticky top-0 z-50 flex w-full items-center px-8 py-5 md:px-12">
+    <header className="bg-bg-primary fixed top-0 right-0 left-0 z-50 flex w-full items-center px-8 py-5 md:px-12">
       <nav className="flex w-full items-center gap-3">
         <div
           className="hidden w-[37%] items-start gap-20 lg:flex"
@@ -87,12 +87,14 @@ const Header = () => {
           ))}
         </div>
         <div className="flex w-full items-center justify-center gap-6 lg:w-[30%]">
-          <img
-            src={headerContent.brandLogo}
-            alt={headerContent.brandName}
-            width={150}
-            height={150}
-          />
+          <div className="lg:absolute lg:top-1/2 lg:left-1/2 lg:z-10 lg:-translate-x-1/2 lg:-translate-y-1/2">
+            <img
+              src={headerContent.brandLogo}
+              alt={headerContent.brandName}
+              width={150}
+              height={150}
+            />
+          </div>
         </div>
         <div
           className="hidden w-[33%] items-end justify-end gap-20 lg:flex"
