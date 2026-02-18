@@ -4,7 +4,7 @@ import { gradients } from "../company-assets/theme";
 const ProductCard = ({ name, type, price, image, description, link }) => {
   return (
     <div
-      className="group hover:border-border-white-alpha flex min-h-80 w-77 flex-col transition-all duration-300 hover:rounded-[24px] hover:opacity-100 hover:shadow-[0px_10px_20px_var(--company-card-shadow)]"
+      className="group hover:border-border-white-alpha flex min-h-80 w-67 flex-col transition-all duration-300 hover:rounded-[24px] hover:opacity-100 hover:shadow-[0px_10px_20px_var(--company-card-shadow)]"
       style={{
         background: gradients.productCardBg,
       }}
@@ -12,7 +12,7 @@ const ProductCard = ({ name, type, price, image, description, link }) => {
       <img
         src={image}
         alt={name}
-        className="h-54 w-76 rounded-2xl object-fill p-1"
+        className="h-64 w-76 rounded-2xl object-fill p-1"
       />
       <div className="flex min-h-23 items-center justify-between gap-2">
         <div className="flex w-full flex-col gap-1.5 rounded-b-2xl bg-transparent px-4 py-1">

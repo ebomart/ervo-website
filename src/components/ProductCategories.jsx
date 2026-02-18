@@ -24,17 +24,15 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
   }, [activeCategory]);
 
   const itemsPerPage = 4;
-  const maxStartIndex =
-    filteredProducts.length > itemsPerPage
-      ? filteredProducts.length - itemsPerPage
-      : 0;
-
   const totalPages =
     filteredProducts.length > 0
       ? Math.ceil(filteredProducts.length / itemsPerPage)
       : 0;
+  const maxStartIndex = totalPages > 0 ? (totalPages - 1) * itemsPerPage : 0;
   const currentPage =
-    itemsPerPage > 0 ? Math.floor(currentIndex / itemsPerPage) : 0;
+    itemsPerPage > 0
+      ? Math.min(Math.floor(currentIndex / itemsPerPage), totalPages - 1)
+      : 0;
 
   const handlePrev = () => {
     setCurrentIndex((prev) => Math.max(0, prev - itemsPerPage));
@@ -64,7 +62,7 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
         <h2 className="text-brand-primary mb-5 text-center text-4xl leading-tight font-bold tracking-tight md:text-5xl">
           {title}
         </h2>
-        <p className="text-text-gray mx-auto mb-14 max-w-4xl text-center text-[20px] px-1 leading-relaxed md:text-lg">
+        <p className="text-text-gray mx-auto mb-14 max-w-4xl px-1 text-center text-[20px] leading-relaxed md:text-lg">
           {description}
         </p>
 
