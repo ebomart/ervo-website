@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ProductCard from "./ProductCard";
 import { productsContent } from "../company-assets/content";
 import { gradients } from "../company-assets/theme";
@@ -11,6 +11,7 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
     productsContent;
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const productsGridRef = useRef(null);
 
   const filteredProducts =
     activeCategory === "All Products"
@@ -34,12 +35,27 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
       ? Math.min(Math.floor(currentIndex / itemsPerPage), totalPages - 1)
       : 0;
 
+  const scrollToGridOnMobile = () => {
+    if (window.innerWidth < 768) {
+      setTimeout(
+        () =>
+          productsGridRef.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          }),
+        0,
+      );
+    }
+  };
+
   const handlePrev = () => {
     setCurrentIndex((prev) => Math.max(0, prev - itemsPerPage));
+    scrollToGridOnMobile();
   };
 
   const handleNext = () => {
     setCurrentIndex((prev) => Math.min(maxStartIndex, prev + itemsPerPage));
+    scrollToGridOnMobile();
   };
 
   const visibleProducts = filteredProducts.slice(
@@ -93,7 +109,10 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
         {activeCategory ? (
           filteredProducts.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              <div
+                ref={productsGridRef}
+                className="grid min-h-[22rem] scroll-mt-20 grid-cols-1 items-start justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4"
+              >
                 {visibleProducts.map((product) => (
                   <ProductCard
                     key={product.id}
@@ -127,18 +146,15 @@ const ProductCategories = ({ activeCategory, setActiveCategory }) => {
                 </button>
 
                 {totalPages > 0 && (
-                  <div className="flex items-center justify-center gap-2">
+                  <div className="flex flex-wrap items-center justify-center gap-1.5 md:gap-2">
                     {Array.from({ length: totalPages }).map((_, index) => (
                       <div
                         key={index}
-                        className={`h-1.5 rounded-full transition-colors ${
+                        className={`h-1.5 w-5 rounded-full transition-colors md:w-8 ${
                           index === currentPage
                             ? "bg-paginator-active"
                             : "bg-paginator-inactive"
                         }`}
-                        style={{
-                          width: "32px",
-                        }}
                       />
                     ))}
                   </div>

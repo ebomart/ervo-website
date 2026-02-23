@@ -29,8 +29,9 @@ const EngineeringExcellence = () => {
   ];
 
   return (
-    <Section
+    <section
       id="why-us"
+      className="scroll-mt-20 mx-auto flex min-h-[300px] w-[90%] max-w-7xl items-center justify-start rounded-3xl bg-center bg-no-repeat md-bg-contain"
       style={{
         background: gradients.engineeringSectionBg,
       }}
@@ -42,7 +43,7 @@ const EngineeringExcellence = () => {
         <p className="text-text-secondary mx-auto mb-16 max-w-4xl text-center text-base leading-relaxed md:text-lg">
           {description}
         </p>
-        <div className="mx-auto grid w-[50%] grid-cols-1 items-center gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid w-[50%] grid-cols-1 items-center gap-12 sm:grid-cols-2 lg:grid-cols-4 pb-10">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -56,7 +57,7 @@ const EngineeringExcellence = () => {
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 
