@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
+/* Theme values are injected from company-assets/theme (injectTheme() in main.jsx). */
 @theme {
-  --color-ervo-brown: #8B4513;
-  --color-ervo-dark-brown: #654321;
-  --color-ervo-light-brown: #A0522D;
-  --color-ibo-red: #A02D2D;
-  
-  --color-text-primary: #1F2937;
-  --color-text-secondary: #4B5563;
-  --color-text-tertiary: #6B7280;
-  --color-text-light: #9CA3AF;
-  --color-text-gray: #616161;
+  --color-ervo-brown: var(--company-ervo-brown);
+  --color-ervo-dark-brown: var(--company-ervo-dark-brown);
+  --color-ervo-light-brown: var(--company-ervo-light-brown);
+  --color-ibo-red: var(--company-ibo-red);
 
-  --color-border-primary: #CBCBCB;
-  --color-bg-div: #F2F2F2;
-  --color-bg-primary: #FFFFFF;
-  --color-bg-secondary: #F9FAFB;
-  --color-bg-tertiary: #F3F4F6;
-  --color-bg-gray: #616161;
+  --color-text-primary: var(--company-text-primary);
+  --color-text-secondary: var(--company-text-secondary);
+  --color-text-tertiary: var(--company-text-tertiary);
+  --color-text-light: var(--company-text-light);
+  --color-text-gray: var(--company-text-gray);
 
+  --color-border-primary: var(--company-border-primary);
+  --color-bg-div: var(--company-bg-div);
+  --color-bg-primary: var(--company-bg-primary);
+  --color-bg-secondary: var(--company-bg-secondary);
+  --color-bg-tertiary: var(--company-bg-tertiary);
+  --color-bg-gray: var(--company-bg-gray);
+
+  /* Brand and accent (for utilities like text-brand-primary, bg-brand-primary) */
+  --color-brand-primary: var(--company-brand-primary);
+  --color-brand-primary-hover: var(--company-brand-primary-hover);
+  --color-border-brand-light: var(--company-border-brand-light);
+  --color-border-white-alpha: var(--company-border-white-alpha);
+  --color-accent-primary: var(--company-accent-primary);
+  --color-paginator-active: var(--company-paginator-active);
+  --color-paginator-inactive: var(--company-paginator-inactive);
 }
 
+#why-us {
+  background: radial-gradient(
+      closest-side at 54% 100%,
+      var(--company-accent) 0%,
+      var(--company-accent-light) 33%,
+      var(--company-accent-fade0) 100%
+    )
+    no-repeat padding-box;
+}
+
+html,
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  /* Hide scrollbars while keeping scroll functionality */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
