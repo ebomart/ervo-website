@@ -1,6 +1,7 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
 export default defineConfig({
-  base: process.env.NODE_ENV === "production"
-    ? "/ebo-pvt-label-b2c-ui/"
-    : "/",
+  base: "/ervo-website/",   // change if repo name differs
   plugins: [react()],
 });
