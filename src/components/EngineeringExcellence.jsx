@@ -43,7 +43,7 @@ const EngineeringExcellence = () => {
         <p className="text-text-secondary mx-auto mb-16 max-w-4xl text-center text-base leading-relaxed md:text-lg">
           {description}
         </p>
-        <div className="mx-auto grid w-[50%] grid-cols-1 items-center gap-12 sm:grid-cols-2 lg:grid-cols-4 pb-10">
+        <div className="mx-auto grid w-[50%] grid-cols-1 items-center lg:gap-40 gap-12 sm:grid-cols-2 lg:grid-cols-4 pb-10">
           {features.map((feature, index) => (
             <div
               key={index}
