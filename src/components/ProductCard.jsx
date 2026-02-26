@@ -4,7 +4,7 @@ import { gradients } from "../company-assets/theme";
 const ProductCard = ({ name, type, price, image, description, link }) => {
   return (
     <div
-      className="group hover:border-border-white-alpha flex w-67 flex-col transition-all duration-300 hover:rounded-[24px] hover:opacity-100 hover:shadow-[0px_10px_20px_var(--company-card-shadow)]"
+      className="group hover:border-border-white-alpha [@media(hover:none)]:border-border-white-alpha flex w-67 flex-col transition-all duration-300 hover:rounded-[24px] hover:opacity-100 hover:shadow-[0px_10px_20px_var(--company-card-shadow)] [@media(hover:none)]:rounded-[24px] [@media(hover:none)]:shadow-[0px_10px_20px_var(--company-card-shadow)]"
       style={{
         background: gradients.productCardBg,
       }}
@@ -28,21 +28,21 @@ const ProductCard = ({ name, type, price, image, description, link }) => {
             className="text-sm text-text-gray"
             dangerouslySetInnerHTML={{ __html: description }}
           /> */}
-          <div className="flex items-center justify-between py-1">
-            <p className="text-text-primary text-base leading-normal font-bold">
+          <div className="flex items-center justify-end py-1">
+            {/* <p className="text-text-primary text-base leading-normal font-bold">
               ₹{price}
-            </p>
+            </p> */}
             <a
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-primary flex cursor-pointer items-center justify-center rounded-full pl-6 font-semibold opacity-0 transition-colors group-hover:visible group-hover:z-10 group-hover:opacity-100"
+              className="text-brand-primary flex cursor-pointer items-center justify-center rounded-full pl-6 font-semibold opacity-0 transition-colors group-hover:visible group-hover:z-10 group-hover:opacity-100 [@media(hover:none)]:visible [@media(hover:none)]:z-10 [@media(hover:none)]:opacity-100"
               style={{
                 background: gradients.productCardButtonBg,
               }}
             >
               <span>know more &nbsp;</span>
-              <img src={arrowRightIcon} alt="arrow right bg-transparent" className="h-6 w-6" />
+              <img src={arrowRightIcon} alt="arrow right" className="h-6 w-6" />
             </a>
           </div>
         </div>
