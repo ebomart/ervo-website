@@ -132,8 +132,8 @@ const Header = () => {
             <img
               src={headerContent.brandLogo}
               alt={headerContent.brandName}
-              width={150}
-              height={150}
+              width={80}
+              height={80}
             />
           </div>
         </div>
